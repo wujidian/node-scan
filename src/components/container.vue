@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import navTop from "@/components/navTop";
-import navBottom from "@/components/navBottom";
+import navTop from "../components/NavTop.vue";
+import navBottom from "../components/navBottom.vue";
 import { getUserInfo } from "@/utils/comm.js";
 export default {
   name: "container",
