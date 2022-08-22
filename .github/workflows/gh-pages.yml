@@ -26,7 +26,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v2
         # 该步骤所需的环境变量
         env:
-          ACCESS_TOKEN: ${{ secrets.MY_TOKEN }}
           # 在部署前要checkout的基本分支，默认是master
           BASE_BRANCH: main # The branch the action should deploy from.
           # 指定部署的分支，默认是 gh-pages 分支
