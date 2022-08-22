@@ -8,7 +8,7 @@
 
 <script>
 import navTop from "../components/NavTop.vue";
-import navBottom from "../components/navBottom.vue";
+import navBottom from "../components/NavBottom.vue";
 import { getUserInfo } from "@/utils/comm.js";
 export default {
   name: "container",
