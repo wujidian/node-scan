@@ -1,0 +1,2 @@
+webpackJsonp([14],{"DM+e":function(t,e){},zcwA:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var a={render:function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"aboutUs pageTop"},[e("img",{attrs:{src:"/static/image/bulletinBg.png"}}),this._v(" "),e("router-view")],1)},staticRenderFns:[]};var r=n("VU/8")({name:"aboutUs",data:function(){return{}}},a,!1,function(t){n("DM+e")},"data-v-726005c4",null);e.default=r.exports}});
+//# sourceMappingURL=14.60e2947b1eb026a2c51f.js.map
