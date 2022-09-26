@@ -3,9 +3,9 @@
     <el-row class="footer">
       <el-col :span="8">
         <div class="btmItem">
-          <img src="/static/image/btmLogo.png" alt />成都无极点科技有限公司
+          <img src="/static/image/btmLogo.png" alt />
         </div>
-        <div class="btmItem">
+        <!-- <div class="btmItem">
           <img
             src="/static/image/dizhi.png"
             alt
@@ -16,13 +16,27 @@
             src="/static/image/dianhua.png"
             alt
           />电话：028-62053633（9:00-18:00）
+        </div> -->
+        <div class="clause">
+
+          <ul>
+            <li>
+              <a :style="{paddingLeft:'0px' }" href="/static/file/user_terms.pdf" target="_blank">用户条款</a>|
+            </li>
+            <li>
+              <a href="/static/file/privacy_agreement.pdf" target="_blank">隐私条款</a>|
+            </li>
+            <li>
+              <a href="/static/file/legal_Notices.pdf" target="_blank">法律声明</a>
+            </li>
+          </ul>
+          <div class="btmItem">
+            © 2021 AnMav . All rights reserved. |
+            <a href="https://beian.miit.gov.cn/" target="_blank">
+              蜀ICP备18015461号-8</a>
+          </div>
         </div>
-        <div class="btmItem">
-          © 2021 AnMav . All rights reserved. |
-          <a href="https://beian.miit.gov.cn/" target="_blank">
-            蜀ICP备18015461号-8</a
-          >
-        </div>
+
       </el-col>
       <!-- <div class="btmList">
           <div>友情链接</div>
@@ -42,24 +56,10 @@
           </ul>
         </div> -->
       <el-col :span="8">
-        <div class="clause">
-          <div>条款说明</div>
-          <ul>
-            <li>
-              <a href="/static/file/user_terms.pdf" target="_blank">用户条款</a
-              >|
-            </li>
-            <li>
-              <a href="/static/file/privacy_agreement.pdf" target="_blank"
-                >隐私条款</a
-              >|
-            </li>
-            <li>
-              <a href="/static/file/legal_Notices.pdf" target="_blank"
-                >法律声明</a
-              >
-            </li>
-          </ul>
+        <div class="btmItem">
+          <!-- © 2021 AnMav . All rights reserved. |
+          <a href="https://beian.miit.gov.cn/" target="_blank">
+            蜀ICP备18015461号-8</a> -->
         </div>
       </el-col>
       <el-col :span="8" class="WeChatQrCode">
@@ -95,6 +95,7 @@ export default {
   background: #181828;
   background-size: 100% 100%;
 }
+
 .footer {
   color: #fff;
   max-width: 1200px;
@@ -106,44 +107,56 @@ export default {
   padding: 20px 0;
   font-size: 16px;
 }
+
 .btmItem {
   display: flex;
   align-items: flex-end;
   padding: 20px 0;
   white-space: nowrap;
 }
+
 .btmItem img {
   margin-right: 21px;
 }
+
 .btmItem a {
   color: #fff;
   margin-left: 5px;
 }
+
 .clause {
-  padding-top: 70px;
-  padding-left: 70px;
+  padding-top: 30px;
+
 }
+
 .clause div {
-  padding: 20px 0;
-  margin-left: 15px;
+  padding: 15px 0;
+  /* margin-left: 15px; */
 }
+
 .clause ul {
-  padding: 20px 0;
+  /* padding: 20px 0; */
   display: flex;
 }
+
+
+
 .clause ul li a {
   padding: 0 15px;
   color: #fff;
 }
+
 .WeChatQrCode {
   display: flex;
   justify-content: flex-end;
   text-align: center;
-  padding-top: 70px;
+  padding-top: 20px;
 }
-.WeChatQrCode > div:first-child {
+
+.WeChatQrCode>div:first-child {
   margin-right: 40px;
 }
+
 .WeChatQrCode .WeChatQrCodeName {
   margin-top: 20px;
 }

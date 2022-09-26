@@ -3,12 +3,7 @@
     <section>
       <el-carousel :height="bannerHeight" class="banner">
         <el-carousel-item v-for="(item, index) in bannerData" :key="index">
-          <img
-            :src="item.imageUrl"
-            height="100%"
-            width="100%"
-            @click="linkTo(item.linkUrl)"
-          />
+          <img :src="item.imageUrl" height="100%" width="100%" @click="linkTo(item.linkUrl)" />
         </el-carousel-item>
       </el-carousel>
     </section>
@@ -16,27 +11,15 @@
       <div class="blockTitle partnerBg">节点生态</div>
       <div class="partnerMask">
         <div class="swiperMask">
-          <div
-            class="swiper-button-prev"
-            slot="button-prev"
-            @click="prev"
-          ></div>
+          <div class="swiper-button-prev" slot="button-prev" @click="prev"></div>
           <swiper class="swiper swiper1" ref="mySwiper" :options="swiperOption">
-            <swiper-slide
-              class="swiper1Item"
-              v-for="(item, index) in partnerData"
-              :key="index"
-            >
+            <swiper-slide class="swiper1Item" v-for="(item, index) in partnerData" :key="index">
               <img :src="item.image" alt />
               <div>{{ item.title }}</div>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
           </swiper>
-          <div
-            class="swiper-button-next"
-            slot="button-next"
-            @click="next"
-          ></div>
+          <div class="swiper-button-next" slot="button-next" @click="next"></div>
         </div>
       </div>
     </section>
@@ -103,11 +86,7 @@
     <section class="ChooseUs">
       <div class="blockTitle">为什么选择我们</div>
       <el-row class="ChooseUs_list" type="flex" justify="space-between">
-        <el-col
-          :md="{ span: 11, offset: 0 }"
-          :sm="{ span: 20, offset: 2 }"
-          :xs="{ span: 20, offset: 2 }"
-        >
+        <el-col :md="{ span: 11, offset: 0 }" :sm="{ span: 20, offset: 2 }" :xs="{ span: 20, offset: 2 }">
           <div class="ChooseUs_item">
             <img src="/static/image/ChooseUs01.png" alt="" />
             <div>
@@ -116,13 +95,9 @@
                 由高级架构师、技术专家、系统工程师等组成，具备多年存储、计算、备份、系统部署等专业领域的咨询、部署、维护等服务经验，为国内众多企业提供高品质的服务。
               </p>
             </div>
-          </div></el-col
-        >
-        <el-col
-          :md="{ span: 11, offset: 0 }"
-          :sm="{ span: 20, offset: 2 }"
-          :xs="{ span: 20, offset: 2 }"
-        >
+          </div>
+        </el-col>
+        <el-col :md="{ span: 11, offset: 0 }" :sm="{ span: 20, offset: 2 }" :xs="{ span: 20, offset: 2 }">
           <div class="ChooseUs_item">
             <img src="/static/image/ChooseUs02.png" alt="" />
             <div>
@@ -131,13 +106,9 @@
                 从底层硬件的创建到上层业务系统的搭建，整合合作伙伴力量，提供全面专业的分布式存储和计算一站式服务。
               </p>
             </div>
-          </div></el-col
-        >
-        <el-col
-          :md="{ span: 11, offset: 0 }"
-          :sm="{ span: 20, offset: 2 }"
-          :xs="{ span: 20, offset: 2 }"
-        >
+          </div>
+        </el-col>
+        <el-col :md="{ span: 11, offset: 0 }" :sm="{ span: 20, offset: 2 }" :xs="{ span: 20, offset: 2 }">
           <div class="ChooseUs_item">
             <img src="/static/image/ChooseUs03.png" alt="" />
             <div>
@@ -146,13 +117,9 @@
                 融合开源、自研、合作伙伴的高深技术，打造高性能高吞吐、灵活拓展的区块链网络和多种解决方案。
               </p>
             </div>
-          </div></el-col
-        >
-        <el-col
-          :md="{ span: 11, offset: 0 }"
-          :sm="{ span: 20, offset: 2 }"
-          :xs="{ span: 20, offset: 2 }"
-        >
+          </div>
+        </el-col>
+        <el-col :md="{ span: 11, offset: 0 }" :sm="{ span: 20, offset: 2 }" :xs="{ span: 20, offset: 2 }">
           <div class="ChooseUs_item">
             <img src="/static/image/ChooseUs04.png" alt="" />
             <div>
@@ -161,8 +128,8 @@
                 项目管理交付采用标准化管理体系，科学交付方法论，专业强大的交付及运营团队，保证客户业务健壮性。
               </p>
             </div>
-          </div></el-col
-        >
+          </div>
+        </el-col>
       </el-row>
     </section>
     <section class="notice">
@@ -171,11 +138,9 @@
         <el-col :sm="{ span: 16, offset: 4 }" :xs="{ span: 20, offset: 2 }">
           <ul class="noticeTable">
             <li v-for="(item, index) in noticeData" :key="index">
-              <div
-                @click="
-                  $router.push('/bulletinDetails/' + $Base64.encode(item.id))
-                "
-              >
+              <div @click="
+                $router.push('/bulletinDetails/' + $Base64.encode(item.id))
+              ">
                 {{ item.title }}
               </div>
               <span>{{ item.createDate | datetimeparse("YYYY-MM-dd") }}</span>
@@ -202,11 +167,14 @@ export default {
   components: { contractComponents },
   data() {
     return {
-      bannerHeight: "628px",
+      bannerHeight: "450px",
       noticeData: [],
       contractData: [],
       nodeData: nodeInfo.nodeData.slice(0, 5),
-      bannerData: [],
+      bannerData: [{
+        imageUrl: "/static/image/banner.jpg",
+        linkUrl: ""
+      }],
       partnerData: [
         {
           image: "/static/image/partner01.png",
@@ -338,15 +306,17 @@ export default {
   },
   created() {
     let windowSize = document.body.clientWidth;
-    if (windowSize < 1920 && windowSize > 992) {
-      this.bannerHeight = "600px";
+    if (windowSize > 1920) {
+      this.bannerHeight = "450px";
+    } else if (windowSize < 1920 && windowSize > 992) {
+      this.bannerHeight = "350px";
     } else if (windowSize > 768 && windowSize <= 992) {
       this.swiperOption.slidesPerView = 5;
-      this.bannerHeight = "550px";
+      this.bannerHeight = "210px";
       console.log(this.swiperOption.slidesPerView);
     } else if (windowSize <= 768) {
       this.swiperOption.slidesPerView = 4;
-      this.bannerHeight = "400px";
+      this.bannerHeight = "100px";
     }
   },
 };
@@ -355,29 +325,35 @@ export default {
 .partner {
   padding-bottom: 50px;
 }
+
 .partnerMask {
   width: 100%;
   height: 200px;
   position: relative;
 }
+
 .partnerMask /deep/ .el-carousel__mask {
   background-color: transparent;
 }
+
 .swiper1 {
   max-width: 1200px;
   height: 100%;
   cursor: pointer;
 }
+
 .swiper1Item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.swiper1Item > div {
+
+.swiper1Item>div {
   margin-top: 20px;
   color: #7b7d89;
 }
+
 .swiperMask {
   max-width: 1200px;
   height: 100%;
@@ -386,11 +362,13 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
 .swiperMask .swiper-button-prev,
 .swiper-button-next {
   position: static;
   color: #aaaaaa;
 }
+
 .more1 {
   color: rgba(112, 116, 255, 1);
   border: none;
@@ -413,6 +391,7 @@ export default {
   width: 1200px;
   margin: 0 auto;
 }
+
 .bgBtn {
   padding: 18px 35px;
   border-radius: 5px;
