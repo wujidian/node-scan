@@ -13,15 +13,13 @@ jobs:
 
       - name: Build for production
         uses: Borales/actions-yarn@v3
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-            
-      - run: yarn
-      - run: yarn build 
 
+      - name: Build for production
+        uses: Borales/actions-yarn@v3
+        with:
+          cmd: yarn
+          cmd: yarn build
+            
       - name: Deploy Gh-Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
