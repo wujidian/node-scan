@@ -13,9 +13,6 @@ jobs:
 
       - name: Build for production
         uses: Borales/actions-yarn@v3
-
-      - name: Build for production
-        uses: Borales/actions-yarn@v3
         with:
           cmd: yarn
           cmd: yarn build
