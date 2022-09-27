@@ -19,8 +19,8 @@ jobs:
       - name: Build for production
         uses: Borales/actions-yarn@v3
         with:
-          cmd: yarn
-          cmd: yarn build
+          run: yarn
+          run: yarn build
       
       - run: yarn
       - run: yarn build
