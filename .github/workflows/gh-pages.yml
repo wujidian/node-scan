@@ -29,5 +29,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          cname: beta.baitech-ipfs.net
+          publish_dir: ./dist
+          cname: www.168node.com
